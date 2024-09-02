@@ -17,7 +17,8 @@ class Solution {
     var end = x;
     var mid = -1;
     while (start <= end) {
-      mid = (start + (end - start) / 2).toInt();
+      // mid = (start + (end - start) / 2).toInt();
+      mid = (start + end) ~/ 2;
       if (mid * mid == x) {
         return mid;
       } else if (mid * mid > x) {
@@ -34,7 +35,7 @@ class Solution {
 void main() {
   final sl = Solution();
 
-print('Result: ${sl.mySqrt(3) == 1}');
+  print('Result: ${sl.mySqrt(3) == 1}');
 
   print('Result: ${sl.mySqrt(4) == 2}');
 
